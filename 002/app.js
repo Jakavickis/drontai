@@ -56,7 +56,7 @@ d12.sort((a, b) => b.name.length - a.name.length);
 
 const d13 = [...data];
 // d13.sort((_, b) => b.type != 'car' ? -1 : 1);
-d13.sort(a => a.type == 'car' ? -1 : 1);
+d13.sort(a => a.type != 'car' ? 1 : -1);
 
 //   const d3 = data.map(e => ({...e}));
 //   d3[1].red = "******";

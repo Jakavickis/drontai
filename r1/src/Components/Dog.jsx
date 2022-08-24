@@ -2,6 +2,10 @@ import rand from '../../src/Functions/rand.js'
 
 function Dog() {
 
+    if (rand(0, 1)) {
+        return null
+    }
+
     return (
         <>
             <h2 className="h2" style={{

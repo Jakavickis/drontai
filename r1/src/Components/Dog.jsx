@@ -4,7 +4,10 @@ function Dog() {
 
     return (
         <>
-            <h2>Cat {false ? 'Jo' : 'GoGo'}</h2>
+            <h2 style={{
+                color: rand(0, 1) ? 'red' : 'blue',
+                fontSize: '50px'
+            }}>Cat {false ? 'Jo' : 'GoGo'}</h2>
             <h3 className="dog">Big {rand(100, 999)}</h3>
         </>
     );

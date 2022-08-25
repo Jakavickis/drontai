@@ -1,5 +1,6 @@
 import './App.css';
 import Cat from './Components/004/Cat';
+import randColor from './Functions/randColor';
 
 const cats = [
     { id: 1, weight: 5, name: 'Murka' },
@@ -13,7 +14,12 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Lists</h1>
+                <h1>{
+                    [...'Dinozaur'].map((l, i) =>
+                        <span key={i} style={{ color: randColor(i) }}>{l}</span>
+                    )
+                }
+                </h1>
                 <div className="container">
                     {
                         // cats.map(cat => <li key={cat.id}>{cat.name}</li>)
@@ -21,6 +27,7 @@ function App() {
                             .map((cat, i) => cat.weight < 4 ? null : <Cat i={i} key={cat.id} cat={cat} />)
                     }
                 </div>
+
                 {/* <div className="container">
                     <Cat catName="Pilkis" weight="20" />
                     <Cat catName="Juodis" weight="5" />

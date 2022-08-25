@@ -18,7 +18,7 @@ function App() {
                     {
                         // cats.map(cat => <li key={cat.id}>{cat.name}</li>)
                         [...cats].sort((a, b) => a.name.localeCompare(b.name))
-                            .map(cat => <Cat key={cat.id} cat={cat} />)
+                            .map((cat, i) => <Cat i={i} key={cat.id} cat={cat} />)
                     }
                 </div>
                 {/* <div className="container">

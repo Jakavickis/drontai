@@ -20,7 +20,7 @@ function App() {
     }
 
     const numberCount = () => {
-        setNumber(number + 1);
+        setNumber(c => c + 1);
     }
 
     return (

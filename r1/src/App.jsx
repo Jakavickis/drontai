@@ -12,11 +12,11 @@ function App() {
     // }
 
     const clicked = () => {
-        setColor('skyblue')
+        setColor(c => c === 'skyblue' ? 'crimson' : 'skyblue')
     }
 
     const doSize = () => {
-        setSize('40')
+        setSize(40)
     }
 
     const numberCount = () => {

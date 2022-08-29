@@ -3,10 +3,6 @@ import Squares from './Components/006/Squares';
 
 function App() {
 
-    const squareX = () => {
-
-    }
-
     return (
         <div className="App">
             <header className="App-header">

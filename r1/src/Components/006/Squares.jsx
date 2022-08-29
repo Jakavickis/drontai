@@ -17,7 +17,8 @@ function Squares() {
                 {
                     sq.map((e, i) => <div style={{
                         fontSize: 25 + 'px',
-                        backgroundColor: e.color
+                        backgroundColor: e.color,
+                        borderRadius: e.number % 2 ? 50 + '%' : null,
                     }} key={i}>{e.number}</div>)
                 }
             </div>

@@ -11,6 +11,10 @@ function Squares() {
         setSq(s => [...s, { number: rand(100, 999), color: randColor() }]);
     }
 
+    const sortNumbers = () => {
+        setSq(s => [...s].sort((a, b) => b.number - a.number))
+    }
+
     return (
         <>
             <div className="container">
@@ -23,6 +27,7 @@ function Squares() {
                 }
             </div>
             <button onClick={add}>add square</button>
+            <button onClick={sortNumbers}>sort</button>
         </>
     )
 }

@@ -17,11 +17,12 @@ function Squares() {
 
     return (
         <>
+            <h1>STATE {sq.filter(s => s.number < 300).length}</h1>
             <div className="container">
                 {
                     sq.map((e, i) => <div style={{
                         fontSize: 25 + 'px',
-                        backgroundColor: e.color,
+                        backgroundColor: e.number > 300 ? e.color : 'black',
                         borderRadius: e.number % 2 ? 50 + '%' : null,
                     }} key={i}>{e.number}</div>)
                 }

@@ -1,4 +1,4 @@
-import randColor from "../Functions/randColor";
+import randColor from "../../Functions/randColor";
 
 function Racoon() {
     return (

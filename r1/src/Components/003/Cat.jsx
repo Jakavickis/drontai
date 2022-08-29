@@ -1,4 +1,4 @@
-import rand from "../Functions/rand";
+import rand from "../../Functions/rand";
 
 function Cat() {
 

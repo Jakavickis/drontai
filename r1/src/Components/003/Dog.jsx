@@ -1,4 +1,4 @@
-import rand from '../../src/Functions/rand.js'
+import rand from '../../Functions/rand.js'
 
 function Dog() {
 

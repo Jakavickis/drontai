@@ -6,6 +6,7 @@ import randColor from "../../Functions/randColor";
 function Squares() {
 
     const [sq, setSq] = useState([]);
+    const [selected, setSelected] = useState(null);
 
     const add = () => {
         // setSq(s => [...s, '']) tiesiog kvadratukas
@@ -36,14 +37,14 @@ function Squares() {
 
     return (
         <>
-            <h1>STATE {sq.filter(s => s.number < 300).length}</h1>
+            <h1>{selected} STATE {sq.filter(s => s.number < 300).length}</h1>
             <div className="container">
                 {
                     sq.map((e, i) => e.show ? <div style={{
                         fontSize: 25 + 'px',
                         backgroundColor: e.number > 300 ? e.color : 'black',
                         borderRadius: e.number % 2 ? 50 + '%' : null,
-                    }} key={i}>{e.number}</div> : null)
+                    }} key={i} onClick={() => setSelected(e.number)}>{e.number}</div> : null)
                 }
             </div>
             <button onClick={add}>add square</button>
@@ -59,5 +60,6 @@ function Squares() {
         </>
     )
 }
+
 
 export default Squares;

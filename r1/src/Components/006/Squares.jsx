@@ -34,6 +34,16 @@ function Squares() {
     const filterColored = () => {
         setSq(s => s.map(square => square.number < 300 ? { ...square, show: false } : { ...square, show: true }))
     }
+    const doClick = (num) => {
+        setSelected(num);
+        setSq(s => s.map(square => square.number === num ? { ...square, show: false } : { ...square }));
+    }
+    const res = () => {
+        setSq(s => s.map(square => square.number === selected ? { ...square, show: true } : { ...square }));
+    }
+    const filter5 = () => {
+        setSq(s => s.map((square, i) => i < 5 ? { ...square, show: true } : { ...square, show: false }));
+    }
 
     return (
         <>
@@ -44,7 +54,7 @@ function Squares() {
                         fontSize: 25 + 'px',
                         backgroundColor: e.number > 300 ? e.color : 'black',
                         borderRadius: e.number % 2 ? 50 + '%' : null,
-                    }} key={i} onClick={() => setSelected(e.number)}>{e.number}</div> : null)
+                    }} key={i} onClick={() => doClick(e.number)}>{e.number}</div> : null)
                 }
             </div>
             <button onClick={add}>add square</button>
@@ -52,11 +62,13 @@ function Squares() {
                 <button onClick={sortHigh}>sort high low</button>
                 <button onClick={sortLow}>sort low hight</button>
             </div>
-            <button onClick={noSort}>square no sort</button>
+            <button onClick={noSort}>square default</button>
             <div className="container">
                 <button onClick={filterBlack}>only black</button>
                 <button onClick={filterColored}>all collored</button>
             </div>
+            <button onClick={res}>resurect</button>
+            <button onClick={filter5}>5 elements</button>
         </>
     )
 }

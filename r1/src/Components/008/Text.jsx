@@ -16,7 +16,7 @@ function Text() {
         setColor(e.target.value);
     }
     const rangeControl = e => {
-        setRange(e.target.value);
+        setRange(parseInt(e.target.value));
     }
 
     return (
@@ -35,8 +35,13 @@ function Text() {
                 <button onClick={() => setColor('red')}>color red</button>
             </div>
             <div className="form-container">
-                <h2>RANGE: {range}</h2>
+                <h2>RANGE: {('' + range)}</h2>
                 <input type="range" onChange={rangeControl} value={range}></input>
+
+                <div className="container div">
+                    <button onClick={() => setRange(s => s - 10)}>minus 10</button>
+                    <button onClick={() => setRange(s => s + 10)}>plus 10</button>
+                </div>
             </div>
         </>
     )

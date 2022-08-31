@@ -39,8 +39,8 @@ function Text() {
                 <input type="range" onChange={rangeControl} value={range}></input>
 
                 <div className="container div">
-                    <button onClick={() => setRange(s => s - 10)}>minus 10</button>
-                    <button onClick={() => setRange(s => s + 10)}>plus 10</button>
+                    <button onClick={() => setRange(s => Math.min(0, s - 10))}>minus 10</button>
+                    <button onClick={() => setRange(s => Math.max(100, s + 10))}>plus 10</button>
                 </div>
             </div>
         </>

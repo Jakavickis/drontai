@@ -57,6 +57,11 @@ function Squares() {
         setSort(s => s * -1);
     }
 
+    // const sorting = () => {
+    //     sort ? sortHigh() : sortLow();
+    //     setSort(s => !s);
+    // }
+
     return (
         <>
             <h1 style={{

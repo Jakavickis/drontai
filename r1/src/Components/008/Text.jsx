@@ -6,6 +6,7 @@ function Text() {
     const [text, setText] = useState('');
     const [color, setColor] = useState('#7caa0c');
     const [range, setRange] = useState(0);
+    const [remember, setRemember] = useState('');
 
     const control = e => {
         // Number(e.target.value) && setText(e.target.value);
@@ -22,8 +23,9 @@ function Text() {
 
         <>
             <div className="form-container">
-                <h2>TEXT</h2>
+                <h2>TEXT: {remember}</h2>
                 <input type="text" onChange={control} value={text}></input>
+                <button onClick={() => setRemember(text)}>Remember Text</button>
             </div>
             <div className="form-container">
                 <h2 style={{

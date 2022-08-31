@@ -23,7 +23,7 @@ function Text() {
 
         <>
             <div className="form-container">
-                <h2>TEXT: {remember}</h2>
+                <h2>TEXT: {remember ? remember : '***'}</h2>
                 <input type="text" onChange={control} value={text}></input>
                 <button onClick={() => setRemember(text)}>Remember Text</button>
             </div>

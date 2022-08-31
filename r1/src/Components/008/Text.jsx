@@ -6,7 +6,7 @@ function Text() {
     const [text, setText] = useState('');
     const [color, setColor] = useState('#7caa0c');
     const [range, setRange] = useState(0);
-    const [remember, setRemember] = useState('');
+    const [remember, setRemember] = useState('***');
 
     const control = e => {
         // Number(e.target.value) && setText(e.target.value);

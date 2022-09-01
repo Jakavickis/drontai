@@ -149,10 +149,10 @@ button {
 
   label {
     cursor: pointer;
-    // user-select: none;
+    user-select: none;
   }
 
-  // input[type=checkbox] {
-  //   // display: none;
-  // }
+  input[type=checkbox] {
+    display: none;
+  }
 }

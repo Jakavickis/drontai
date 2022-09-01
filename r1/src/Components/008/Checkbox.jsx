@@ -7,7 +7,12 @@ const radioData = { A: false, B: false, C: true, D: false }
 function Checkbox() {
 
     const [cb, setCb] = useState(checksData);
-    const [radio, setRadio] = useState(radioData)
+    const [radio, setRadio] = useState(radioData);
+    const [boxState, setBoxState] = useState(false);
+    const [paint, setPaint] = useState(false);
+    const [cb1, setCb1] = useState(false);
+    const [cb2, setCb2] = useState(false);
+
 
     const change = e => {
         const v = e.target.value;
@@ -78,6 +83,34 @@ function Checkbox() {
                     <label htmlFor="_8" style={{ color: radio.D ? 'crimson' : null }}>D Raide</label>
                 </div>
             </div>
+            <div className="form-container">
+                <div className="container div">
+                    <div style={{
+                        backgroundColor: paint ? 'black' : 'crimson'
+                    }}></div>
+                </div>
+                <div>
+                    <input type="checkbox" id="_9" onChange={() => setBoxState(s => s = !s)} checked={boxState}></input>
+                    <label htmlFor="_9" style={{ color: boxState ? 'crimson' : null }}>Checkbox</label>
+                </div>
+                <button onClick={() => setPaint(boxState)}>MYGTUKAS</button>
+            </div>
+
+            <div className="form-container">
+                <div className="container div">
+                    <div style={{
+                        backgroundColor: cb1 && cb2 === true ? 'red' : 'black'
+                    }}></div>
+                </div>
+                <div className="form-container">
+                    <input type="checkbox" id="_10" onChange={() => setCb1(s => s = !s)} checked={cb1}></input>
+                    <label htmlFor="_10" style={{ color: cb1 ? 'crimson' : null }}>Color</label>
+                    <input type="checkbox" id="_11" onChange={() => setCb2(s => s = !s)} checked={cb2}></input>
+                    <label htmlFor="_11" style={{ color: cb2 ? 'crimson' : null }}>Color</label>
+                </div>
+            </div>
+
+
         </>
 
 

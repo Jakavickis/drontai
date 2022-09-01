@@ -1,9 +1,11 @@
 import { useState } from "react";
 import rand from "../../Functions/rand";
 
+const checksData = { A: false, B: true, C: true, D: false }
+
 function Checkbox() {
 
-    const [cb, setCb] = useState({ A: false, B: true, C: true, D: false })
+    const [cb, setCb] = useState(checksData)
 
     const change = e => {
         const v = e.target.value;
@@ -11,12 +13,18 @@ function Checkbox() {
     }
 
     const onclick = () => {
-        setCb({
-            A: !rand(0, 1),
-            B: !rand(0, 1),
-            C: !rand(0, 1),
-            D: !rand(0, 1)
-        })
+        const checks = {};
+        for (const a in checksData) {
+            checks[a] = !rand(0, 1);
+        }
+        setCb(checks)
+
+        // setCb({
+        //     A: !rand(0, 1),
+        //     B: !rand(0, 1),
+        //     C: !rand(0, 1),
+        //     D: !rand(0, 1)
+        // })
     }
 
     return (

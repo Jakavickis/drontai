@@ -27,6 +27,7 @@ function Select() {
                 <button onClick={() => setSelect(2)}>delfinas</button>
             </div>
             <div className="form-container">
+                <h2>Selected: {selectData.find(s => s.val === parseInt(selects))?.name}</h2>
                 <select value={selects} onChange={e => setSelects(e.target.value)}>
                     {
                         selectData.map(s => <option key={s.val} value={s.val}>{s.name}</option>)

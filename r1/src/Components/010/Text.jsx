@@ -13,7 +13,6 @@ function Text({ setTextNow }) {
     return (
         <>
             <div className="form-container">
-
                 <input type="text" onChange={control} value={text}></input>
                 <button onClick={() => setTextNow(text)}>Text Now</button>
             </div>

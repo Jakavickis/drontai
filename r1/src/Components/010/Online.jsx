@@ -1,8 +1,6 @@
-import { useState } from "react";
 
-function Online() {
+function Online({ setText, text }) {
 
-    const [text, setText] = useState('');
 
     const control = e => {
         setText(e.target.value)
@@ -12,9 +10,7 @@ function Online() {
 
     return (
         <>
-            <h2 style={{
-                textTransform: text === "lowercase" ? "uppercase" : "uppercase",
-            }}>{text}</h2>
+
             <div>
                 <input type="text" onChange={control} value={text}></input>
             </div>

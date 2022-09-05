@@ -1,31 +1,32 @@
-import './App.scss';
-import Text from './Components/010/Text';
+import { useEffect } from 'react';
 import { useState } from 'react';
-import Online from './Components/010/Online';
-import Two from './Components/010/Two';
-import OnlineInput from './Components/010/OnlineInput';
+import './App.scss';
+import Dog from './Components/011/Dog';
+
 
 function App() {
+    const [dogs, setDogs] = useState([]);
 
-    const [textNow, setTextNow] = useState('');
-    const [box, setBox] = useState(false);
-    const [circle, setCircle] = useState(false);
-    const [text, setText] = useState('');
+    const add = () => {
+        setDogs(d => [...d, d.length])
+    }
 
+    useEffect(() => {
+        console.log('Dogs Changed')
+    }, [dogs])
 
     return (
         <div className="App">
             <header className="App-header">
-                <h1>State Uplifting</h1>
-                <h2>TEXT: {textNow}</h2>
-                <Text setTextNow={setTextNow} />
-                <OnlineInput text={text} />
-                <Online setText={setText} text={text} />
-                <div className='container'>
-                    {box ? <div className="kv"></div> : null}
-                    {circle ? <div className="ap"></div> : null}
+                <h1>Use Effect</h1>
+                <div className="container">
+                    {
+                        dogs.map((n, i) => <Dog key={n} i={n}></Dog>)
+                    }
                 </div>
-                <Two setBox={setBox} setCircle={setCircle} />
+                <div className="container">
+                    <button onClick={add}>Add Dog</button>
+                </div>
             </header>
         </div>
     );

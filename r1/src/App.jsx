@@ -6,19 +6,26 @@ import Dog from './Components/011/Dog';
 
 function App() {
     const [dogs, setDogs] = useState([]);
+    const [count, setCount] = useState(1);
 
     const add = () => {
         setDogs(d => [...d, d.length])
     }
 
+    const addCount = () => {
+        setCount(c => c + 1)
+    }
+
     useEffect(() => {
-        console.log('Dogs Changed')
-    }, [dogs])
+        console.log('Dogs Changed Or Added 1');
+        console.log('count is: ' + count);
+        // setCount(c => c + 1) galima uzciklinti 
+    }, [dogs, count]);
 
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Use Effect</h1>
+                <h1>Use Effect {count}</h1>
                 <div className="container">
                     {
                         dogs.map((n, i) => <Dog key={n} i={n}></Dog>)
@@ -26,6 +33,7 @@ function App() {
                 </div>
                 <div className="container">
                     <button onClick={add}>Add Dog</button>
+                    <button onClick={addCount}>Plus Count</button>
                 </div>
             </header>
         </div>

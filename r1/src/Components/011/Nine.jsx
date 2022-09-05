@@ -1,8 +1,8 @@
-import randomColor from '../../Functions/randColor';
+import randColor from '../../Functions/randColor';
 function Nine({ nine, setNine }) {
 
     const changeColor = c => {
-        setNine(n => n.map(kv => kv === c ? randomColor() : kv));
+        setNine(n => n.map(kv => kv === c ? randColor() : kv));
     }
 
     return (

@@ -3,6 +3,9 @@ import './App.scss';
 import Dog from './Components/011/Dog';
 import randColor from './Functions/randColor';
 import Nine from './Components/011/Nine';
+import Bin from './Components/011/Bin';
+import Del from './Components/011/Del';
+import New from './Components/011/New';
 
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
     const index = useRef(0);
     const addButton = useRef();
     const [nine, setNine] = useState([]);
+    const [data, setData] = useState([]);
 
 
     const addNine = () => {
@@ -53,6 +57,19 @@ function App() {
                 </div>
                 <Nine nine={nine} setNine={setNine}></Nine>
                 <button onClick={addNine}>Add Nine</button>
+
+                <div className="layout-main">
+                    <div className="layout-left">
+                        <New setData={setData} />
+                        <Del setData={setData} />
+                    </div>
+                    <div className="layout-right">
+                        <Bin select={1} data={data} />
+                        <Bin select={2} data={data} />
+                        <Bin select={3} data={data} />
+                    </div>
+
+                </div>
             </header>
         </div>
     );

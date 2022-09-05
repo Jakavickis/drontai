@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './App.scss';
 import Dog from './Components/011/Dog';
 
@@ -7,9 +6,16 @@ import Dog from './Components/011/Dog';
 function App() {
     const [dogs, setDogs] = useState([]);
     const [count, setCount] = useState(1);
+    const index = useRef(0);
+    const addButton = useRef();
+
+    useEffect(() => {
+        const b = addButton.current;
+        b.focus();
+    }, [])
 
     const add = () => {
-        setDogs(d => [...d, d.length])
+        setDogs(d => [...d, ++index.current])
     }
 
     const addCount = () => {
@@ -32,7 +38,7 @@ function App() {
                     }
                 </div>
                 <div className="container">
-                    <button onClick={add}>Add Dog</button>
+                    <button onClick={add} id="add-button" ref={addButton}>Add Dog</button>
                     <button onClick={addCount}>Plus Count</button>
                 </div>
             </header>

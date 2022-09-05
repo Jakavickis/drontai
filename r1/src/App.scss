@@ -116,6 +116,10 @@ button {
     text-decoration: none;
   }
 
+  // &:focus {
+  //   background-color: aquamarine;
+  // }
+
   &:active {
     transform: scale(0.95);
   }

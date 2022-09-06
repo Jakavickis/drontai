@@ -30,9 +30,11 @@ function Plus() {
     return (
         <>
             <div>
-                {
-                    plus
-                }
+                <h3>
+                    {
+                        plus
+                    }
+                </h3>
             </div>
             <button onClick={addPlus}>Add Plus</button>
         </>

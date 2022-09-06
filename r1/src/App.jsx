@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.scss';
 import Plus from './Components/012/Plus';
+import RandSquare from './Components/012/RandSquare';
 import Squares from './Components/012/Squares';
 
 const defaultCount = { one: 0, two: 0 };
@@ -46,6 +47,7 @@ function App() {
                 </div>
                 <Squares />
                 <Plus />
+                <RandSquare />
             </header>
         </div >
     );

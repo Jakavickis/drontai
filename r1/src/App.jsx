@@ -40,8 +40,8 @@ function App() {
                 <div className='container'>
                     <button onClick={() => setCounts(c => ({ ...c, one: c.one + 1 }))}>one +</button>
                     <button onClick={() => setCounts(c => ({ ...c, two: c.two + 1 }))}>two +</button>
-                    <button onClick={() => setCounts(c => ({ ...c, one: c.one - 1 }))}>one +</button>
-                    <button onClick={() => setCounts(c => ({ ...c, two: c.two - 1 }))}>two +</button>
+                    <button onClick={() => setCounts(c => ({ ...c, one: c.one - 1 }))}>one -</button>
+                    <button onClick={() => setCounts(c => ({ ...c, two: c.two - 1 }))}>two -</button>
                     <button onClick={() => setCounts(defaultCount)}>Reset</button>
 
                 </div>

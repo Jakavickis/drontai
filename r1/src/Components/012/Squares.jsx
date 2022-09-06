@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 function Squares() {
 
-    const [squares, setSquares] = useState([]);
+    const [squares, setSquares] = useState(null);
 
 
     useEffect(() => {
@@ -33,7 +33,7 @@ function Squares() {
         <>
             <div className="container">
                 {
-                    squares.map((_, i) => <div key={i}>{squares}</div>)
+                    squares?.map((_, i) => <div key={i}>{squares}</div>)
                 }
             </div>
             <button onClick={add}>Square[ ]</button>

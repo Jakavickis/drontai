@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.scss';
+import Plus from './Components/012/Plus';
 import Squares from './Components/012/Squares';
 
 const defaultCount = { one: 0, two: 0 };
@@ -35,12 +36,16 @@ function App() {
                 <h2>local storage</h2>
                 <h2>ONE: {counts?.one}</h2>
                 <h2>Two: {counts?.two}</h2>
-                <button onClick={() => setCounts(c => ({ ...c, one: c.one + 1 }))}>one +</button>
-                <button onClick={() => setCounts(c => ({ ...c, two: c.two + 1 }))}>two +</button>
-                <button onClick={() => setCounts(c => ({ ...c, one: c.one - 1 }))}>one +</button>
-                <button onClick={() => setCounts(c => ({ ...c, two: c.two - 1 }))}>two +</button>
-                <button onClick={() => setCounts(defaultCount)}>Reset</button>
+                <div className='container'>
+                    <button onClick={() => setCounts(c => ({ ...c, one: c.one + 1 }))}>one +</button>
+                    <button onClick={() => setCounts(c => ({ ...c, two: c.two + 1 }))}>two +</button>
+                    <button onClick={() => setCounts(c => ({ ...c, one: c.one - 1 }))}>one +</button>
+                    <button onClick={() => setCounts(c => ({ ...c, two: c.two - 1 }))}>two +</button>
+                    <button onClick={() => setCounts(defaultCount)}>Reset</button>
+
+                </div>
                 <Squares />
+                <Plus />
             </header>
         </div >
     );

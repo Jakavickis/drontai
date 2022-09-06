@@ -37,6 +37,7 @@ function Squares() {
                 }
             </div>
             <button onClick={add}>Square[ ]</button>
+            <button onClick={() => setSquares([])}>Reset [ ]</button>
         </>
     )
 }

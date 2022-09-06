@@ -4,7 +4,10 @@ function App() {
 
   return (
     <div>
-      Crud
+      <button>Just button</button>
+      <button className='blue'>Blue</button>
+      <button className='red'>Red</button>
+      <button className='green'>Green</button>
     </div>
   );
 }

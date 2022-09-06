@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.scss';
+import Squares from './Components/012/Squares';
 
 const defaultCount = { one: 0, two: 0 };
 
 function App() {
 
     const [counts, setCounts] = useState(null);
+
 
     useEffect(() => {
 
@@ -38,6 +40,7 @@ function App() {
                 <button onClick={() => setCounts(c => ({ ...c, one: c.one - 1 }))}>one +</button>
                 <button onClick={() => setCounts(c => ({ ...c, two: c.two - 1 }))}>two +</button>
                 <button onClick={() => setCounts(defaultCount)}>Reset</button>
+                <Squares />
             </header>
         </div >
     );

@@ -1,6 +1,7 @@
 
 
 import './App.scss';
+import CbcChange from './Components/014/CbcChange';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
             <header className="App-header">
                 <h1>Total recall</h1>
+                <CbcChange />
             </header>
 
         </div >

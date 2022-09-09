@@ -17,7 +17,7 @@ function RandNumbers() {
         <>
             <div>
                 {
-                    numb.sort((a, b) => a - b).map((n, i) => <span key={i}>{n} </span>)
+                    [...numb].sort((a, b) => a - b).map((n, i) => <span key={i}>{n} </span>)
                 }
             </div>
             <button onClick={sortNumb}>Numbers Sort</button>

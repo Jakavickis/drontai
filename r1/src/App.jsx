@@ -2,6 +2,7 @@
 
 import './App.scss';
 import CbcChange from './Components/014/CbcChange';
+import Picture from './Components/014/Picture';
 import RandNumbers from './Components/014/RandNumbers';
 import T3 from './Components/014/T3';
 
@@ -16,6 +17,7 @@ function App() {
                 <CbcChange />
                 <RandNumbers />
                 <T3 />
+                <Picture />
             </header>
 
         </div >

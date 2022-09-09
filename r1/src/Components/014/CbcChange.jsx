@@ -3,20 +3,24 @@ import { useState } from "react";
 
 function CbcChange() {
 
-    const [color, setColor] = useState('crimson');
-    const [bColor, setBColor] = useState('blue')
+    const [color, setColor] = useState({
+        ba: randColor(),
+        bo: randColor()
+    });
 
     const changeColor = () => {
-        setColor(randColor())
-        setBColor(randColor())
+        setColor({
+            ba: randColor(),
+            bo: randColor()
+        })
     }
 
     return (
         <>
             <div className="container">
                 <div className="kvWithBorder" style={{
-                    backgroundColor: color,
-                    borderColor: bColor
+                    backgroundColor: color.ba,
+                    borderColor: color.bo
                 }}>
 
                 </div>

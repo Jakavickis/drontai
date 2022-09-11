@@ -33,12 +33,10 @@ function App() {
                 <T02 setSquare={setSquare} />
                 <div>
                     <h2>
-
                         <T03 circleHop={circleHop} move={move} />
                     </h2>
                     <div>????</div>
                     <h5>
-
                         <T032 circleHop={circleHop} move={move} />
                     </h5>
                 </div>

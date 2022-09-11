@@ -2,6 +2,7 @@
 
 import './App.scss';
 import CbcChange from './Components/014/CbcChange';
+import DoubleSquare from './Components/014/DoubleSquare';
 import ManyButtons from './Components/014/ManyButtons';
 import Picture from './Components/014/Picture';
 import RandNumbers from './Components/014/RandNumbers';
@@ -22,6 +23,7 @@ function App() {
                 <Picture />
                 <ManyButtons />
                 <Sircle />
+                <DoubleSquare />
             </header>
 
         </div >

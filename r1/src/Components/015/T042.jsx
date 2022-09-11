@@ -3,7 +3,7 @@ function T042({ addSquare }) {
         <>
             <div className="container">
                 {
-                    addSquare.map((_, i) => <div className="kv" style={{
+                    addSquare.map((n, i) => <div className={n} style={{
                         backgroundColor: 'crimson'
                     }} key={i}></div>)
                 }

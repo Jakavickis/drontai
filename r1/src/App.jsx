@@ -1,29 +1,28 @@
-
-
 import './App.scss';
-import CbcChange from './Components/014/CbcChange';
-import DoubleSquare from './Components/014/DoubleSquare';
-import ManyButtons from './Components/014/ManyButtons';
-import Picture from './Components/014/Picture';
-import RandNumbers from './Components/014/RandNumbers';
-import Sircle from './Components/014/Sircles';
-import T3 from './Components/014/T3';
+import T01 from './Components/015/T01';
+import T012 from './Components/015/T012';
+import { useState } from 'react';
+import T02 from './Components/015/T02';
+import T022 from './Components/015/T022';
 
 function App() {
 
+    const [count, setCount] = useState(0);
+    const counting = () => {
+        setCount(c => c + 19)
+    }
+
+    const [square, setSquare] = useState(false);
 
     return (
         <div className="App">
 
             <header className="App-header">
-                <h1>Total recall</h1>
-                <CbcChange />
-                <RandNumbers />
-                <T3 />
-                <Picture />
-                <ManyButtons />
-                <Sircle />
-                <DoubleSquare />
+                <h2> Total recall 2</h2>
+                <T012 count={count} />
+                <T01 counting={counting} />
+                <T022 square={square} />
+                <T02 setSquare={setSquare} />
             </header>
 
         </div >

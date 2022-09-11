@@ -7,6 +7,8 @@ import T022 from './Components/015/T022';
 import T03 from './Components/015/T03';
 import T032 from './Components/015/T032';
 import T033 from './Components/015/T033';
+import T04 from './Components/015/T04';
+import T042 from './Components/015/T042';
 
 function App() {
 
@@ -25,6 +27,12 @@ function App() {
     const [testDir, setTestDir] = useState(true);
     const move2 = () => {
         setTestDir(c => !c)
+    }
+
+    const [addSquare, setAddSquare] = useState([])
+
+    const plus = () => {
+        setAddSquare(s => [...s, ''])
     }
 
     return (
@@ -54,6 +62,8 @@ function App() {
                         <T033 testDir={testDir} move2={move2} dir={false} />
                     </h5>
                 </div>
+                <T04 plus={plus} />
+                <T042 addSquare={addSquare} />
 
             </header>
 

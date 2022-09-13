@@ -1,5 +1,6 @@
 import './App.scss';
 import Count from './Components/016/Count';
+import RandSqColor from './Components/016/RandSqColor';
 
 function App() {
 
@@ -7,13 +8,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h2 style={{
-                    borderStyle: 'solid',
-                    border: 5 + 'px',
-                    borderColor: 'green'
-
-                }}>UseReducer</h2>
+                <h2>UseReducer</h2>
                 <Count />
+                <RandSqColor />
             </header>
         </div >
     );

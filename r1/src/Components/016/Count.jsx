@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { add1, rem1, add2, rem2, rem5, add5, randomColor, randomFont } from "../../Actions/count";
+import { add1, rem1, add2, rem2, rem5, add5, randomColor, randomFont, borderShowHide } from "../../Actions/count";
 import count from "../../Reducers/count";
 
 function Count() {
@@ -7,14 +7,16 @@ function Count() {
     const [counter, dispachCounter] = useReducer(count, {
         number: 0,
         color: 'green',
-        fontSize: 40 + 'px'
+        fontSize: 40 + 'px',
+        border: true
     });
 
     return (
         <>
             <h2 style={{
                 color: counter.color,
-                fontSize: counter.fontSize
+                fontSize: counter.fontSize,
+                border: counter.border ? '1px solid black' : null
             }}>{counter.number}</h2>
             <div className="container">
                 <button onClick={() => dispachCounter(add1())}>+1</button>
@@ -25,6 +27,7 @@ function Count() {
                 <button onClick={() => dispachCounter(rem5())}>-5</button>
                 <button onClick={() => dispachCounter(randomColor())}>random color</button>
                 <button onClick={() => dispachCounter(randomFont())}>random fontsize</button>
+                <button onClick={() => dispachCounter(borderShowHide())}>border show hide</button>
             </div>
         </>
     )

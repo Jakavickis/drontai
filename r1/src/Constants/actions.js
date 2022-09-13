@@ -5,3 +5,4 @@ export const REMOVE_TWO = 4;
 export const ADD_FIVE = 5;
 export const REMOVE_FIVE = 6;
 export const RAND_COLOR = 7;
+export const RAND_FONT = 8;

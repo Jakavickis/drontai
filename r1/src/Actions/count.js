@@ -1,4 +1,4 @@
-import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE } from '../Constants/actions';
+import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COLOR } from '../Constants/actions';
 
 export function add1() {
     return {
@@ -33,5 +33,10 @@ export function add5() {
 export function rem5() {
     return {
         type: REMOVE_FIVE
+    }
+}
+export function randomColor() {
+    return {
+        type: RAND_COLOR
     }
 }

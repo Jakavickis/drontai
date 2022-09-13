@@ -1,4 +1,5 @@
-import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE } from "../Constants/actions";
+import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COLOR } from "../Constants/actions";
+import randColor from "../Functions/randColor";
 
 function count(state, action) {
     let newState = { ...state };
@@ -21,6 +22,9 @@ function count(state, action) {
         case REMOVE_FIVE:
             newState.number -= 5;
             break;
+        case RAND_COLOR:
+            newState.color = randColor();
+            break
         default:
     }
 

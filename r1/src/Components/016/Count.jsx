@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { add1, rem1, add2, rem2, rem5, add5, randomColor, randomFont, borderShowHide, addSquare } from "../../Actions/count";
+import { add1, rem1, add2, rem2, rem5, add5, randomColor, randomFont, borderShowHide, addSquare, remSquare } from "../../Actions/count";
 import count from "../../Reducers/count";
 import sq from "../../Reducers/sq";
 
@@ -21,6 +21,7 @@ function Count() {
                     sqer.map((_, i) => <div className="kv" key={i}></div>)
                 }</div>
             <button onClick={() => dispachSqer(addSquare())}>add square</button>
+            <button onClick={() => dispachSqer(remSquare())}>rem square</button>
             <h2 style={{
                 color: counter.color,
                 fontSize: counter.fontSize,

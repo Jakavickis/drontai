@@ -8,3 +8,4 @@ export const RAND_COLOR = 7;
 export const RAND_FONT = 8;
 export const BORDER_S_H = 13;
 export const SQUARE = 9;
+export const REM_SQUARE = 25;

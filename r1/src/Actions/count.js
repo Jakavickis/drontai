@@ -1,4 +1,4 @@
-import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COLOR, RAND_FONT, BORDER_S_H, SQUARE } from '../Constants/actions';
+import { ADD_ONE, ADD_TWO, REMOVE_ONE, REMOVE_TWO, ADD_FIVE, REMOVE_FIVE, RAND_COLOR, RAND_FONT, BORDER_S_H, SQUARE, REM_SQUARE } from '../Constants/actions';
 
 export function add1() {
     return {
@@ -55,5 +55,10 @@ export function borderShowHide() {
 export function addSquare() {
     return {
         type: SQUARE
+    }
+}
+export function remSquare() {
+    return {
+        type: REM_SQUARE
     }
 }

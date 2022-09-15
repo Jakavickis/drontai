@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useReducer } from "react";
-import { actionRand } from "../../Actions/017";
+import { actionRand, actionSortRand10 } from "../../Actions/017";
 import random10 from "../../Reducers/random10";
 
 function Rand10() {
@@ -19,6 +19,7 @@ function Rand10() {
                 }
             </div>
             <button onClick={() => dispachRandom(actionRand())}>render new 10</button>
+            <button onClick={() => dispachRandom(actionSortRand10())}>sort rand numbers</button>
         </>
     )
 }

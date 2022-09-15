@@ -6,3 +6,4 @@ export const COLOR_3_BORDER_STYLE = 'SELECT_BORDER';
 export const PLUS_BUT = 2;
 export const MINUS_BUT = 3;
 export const RAND_NUMBERS = 4;
+export const SORT_RAND_10 = 5;

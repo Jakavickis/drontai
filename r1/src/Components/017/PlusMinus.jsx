@@ -5,7 +5,10 @@ import countTest from "../../Reducers/countTest";
 
 function PlusMinus() {
 
-    const [number, dispachNumber] = useReducer(countTest, { count: 0 });
+    const [number, dispachNumber] = useReducer(countTest, {
+        count: 0
+    });
+
     const [inputNumber, setInputNumber] = useState(0);
 
     return (

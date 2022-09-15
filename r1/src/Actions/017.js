@@ -1,4 +1,4 @@
-import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, SQ_SIZE } from "../Constants/017";
+import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, RAND_NUMBERS, SQ_SIZE } from "../Constants/017";
 
 export function actionColor3() {
     return {
@@ -38,5 +38,10 @@ export function actionMinusBut(number) {
     return {
         type: MINUS_BUT,
         payload: number
+    }
+}
+export function actionRand() {
+    return {
+        type: RAND_NUMBERS
     }
 }

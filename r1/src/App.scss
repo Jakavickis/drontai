@@ -55,6 +55,12 @@ h2.h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  h4 {
+    color: blue;
+    margin-right: 10px;
+  }
+
 }
 
 .container div {

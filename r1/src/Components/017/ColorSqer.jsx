@@ -42,7 +42,7 @@ function ColorSqer() {
                 <option value="dashed">Dashed</option>
             </select>
             <button onClick={() => { dispachColorsSqer(actionColor3BorderStle(borderStyles)) }}>Set Border Style</button>
-
+            <div>-------------------------------------------------</div>
         </>
     )
 }

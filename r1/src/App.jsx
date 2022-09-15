@@ -1,5 +1,6 @@
 import './App.scss';
 import ColorSqer from './Components/017/ColorSqer';
+import PlusMinus from './Components/017/PlusMinus';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             <header className="App-header">
                 <h2>UseReducer 2</h2>
                 <ColorSqer />
+                <PlusMinus />
             </header>
         </div >
     );

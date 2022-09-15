@@ -1,4 +1,4 @@
-import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, SQ_SIZE } from "../Constants/017";
+import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, SQ_SIZE } from "../Constants/017";
 
 export function actionColor3() {
     return {
@@ -20,5 +20,23 @@ export function actionColor3BorderStle(border) {
     return {
         type: COLOR_3_BORDER_STYLE,
         payload: border
+    }
+}
+// export function actionPlusMinus(number) {
+//     return {
+//         type: PLUS_MINUS_NUMBER,
+//         payload: number
+//     }
+//}
+export function actionPlusBut(numbers) {
+    return {
+        type: PLUS_BUT,
+        payload: numbers
+    }
+}
+export function actionMinusBut(number) {
+    return {
+        type: MINUS_BUT,
+        payload: number
     }
 }

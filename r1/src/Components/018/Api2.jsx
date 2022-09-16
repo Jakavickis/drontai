@@ -10,7 +10,7 @@ function Api2() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
                 console.log(res);
-                setPost(res.data.sort((a, b) => b.title.length - a.title.length))
+                setPost(res.data.sort((a, b) => a.title.length - b.title.length))
             })
     }, [])
 
@@ -18,7 +18,9 @@ function Api2() {
         <>
             <ul>
                 {
-                    post.map(p => <ul key={p.id}>{p.title}</ul>)
+                    post.map(p => <ul style={{
+                        color: p.title.length < 40 ? 'red' : null
+                    }} key={p.id}>{p.title}</ul>)
                 }
 
             </ul>

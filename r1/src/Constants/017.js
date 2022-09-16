@@ -7,3 +7,6 @@ export const PLUS_BUT = 2;
 export const MINUS_BUT = 3;
 export const RAND_NUMBERS = 4;
 export const SORT_RAND_10 = 5;
+export const SORT_RAND_10_REVERSE = 6;
+export const RAND_RESET = 'RAND_RESET';
+export const RAND_RAND = 'RAND_RAND';

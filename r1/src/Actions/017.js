@@ -1,4 +1,4 @@
-import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, RAND_NUMBERS, SORT_RAND_10, SQ_SIZE } from "../Constants/017";
+import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, RAND_NUMBERS, RAND_RAND, RAND_RESET, SORT_RAND_10, SORT_RAND_10_REVERSE, SQ_SIZE } from "../Constants/017";
 
 export function actionColor3() {
     return {
@@ -49,5 +49,21 @@ export function actionRand() {
 export function actionSortRand10() {
     return {
         type: SORT_RAND_10
+    }
+}
+
+export function actionSortRand10Reverse() {
+    return {
+        type: SORT_RAND_10_REVERSE
+    }
+}
+export function actionReset() {
+    return {
+        type: RAND_RESET
+    }
+}
+export function actionRandRand() {
+    return {
+        type: RAND_RAND
     }
 }

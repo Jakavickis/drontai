@@ -19,6 +19,7 @@ function PlusMinus() {
                 <button onClick={() => dispachNumber(actionPlusBut(inputNumber))}>add + number</button>
                 <button onClick={() => dispachNumber(actionMinusBut(inputNumber))}>remove - number</button>
             </div>
+            <div>-------------------------------------------------</div>
         </>
     )
 }

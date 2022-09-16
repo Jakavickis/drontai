@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useReducer } from "react";
 import { actionRand, actionSortRand10 } from "../../Actions/017";
-import random10 from "../../Reducers/random10";
+import random10Obj from "../../Reducers/random10Obj";
 
-function Rand10() {
+function Rand10Obj() {
 
-    const [random, dispachRandom] = useReducer(random10, [])
+    const [random, dispachRandom] = useReducer(random10Obj, [])
 
     useEffect(() => {
         dispachRandom(actionRand())
@@ -15,14 +15,15 @@ function Rand10() {
         <>
             <div className="container">
                 {
-                    random.map((n, i) => <h4 key={i}>{n}</h4>)
+                    random.map((n, i) => <h4 key={i} style={{
+                        borderBottom: n.line ? '2px solid orange' : null
+                    }}>{n.numbers}</h4>)
                 }
             </div>
             <button onClick={() => dispachRandom(actionRand())}>render new 10</button>
             <button onClick={() => dispachRandom(actionSortRand10())}>sort rand numbers</button>
-            <div>-------------------------------------------------</div>
         </>
     )
 }
 
-export default Rand10;
+export default Rand10Obj;

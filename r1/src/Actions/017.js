@@ -1,4 +1,4 @@
-import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, RAND_NUMBERS, RAND_RAND, RAND_RESET, SORT_RAND_10, SORT_RAND_10_REVERSE, SQ_SIZE } from "../Constants/017";
+import { BORDER_INPUT, COLOR_3, COLOR_3_BORDER_STYLE, MINUS_BUT, PLUS_BUT, RAND_NUMBERS, RAND_RAND, RAND_RESET, SORT_RAND_10, SORT_RAND_10_REVERSE, SQ_SIZE, TRIPLE_SHOW_HIDE, TRIPLE_SHOW_RESET } from "../Constants/017";
 
 export function actionColor3() {
     return {
@@ -65,5 +65,15 @@ export function actionReset() {
 export function actionRandRand() {
     return {
         type: RAND_RAND
+    }
+}
+export function actionTripleShow() {
+    return {
+        type: TRIPLE_SHOW_HIDE
+    }
+}
+export function actionTripleShowReset() {
+    return {
+        type: TRIPLE_SHOW_RESET
     }
 }

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useReducer } from "react";
-import { actionRand, actionRandRand, actionReset, actionSortRand10, actionSortRand10Reverse } from "../../Actions/017";
+import { actionRand, actionRandRand, actionReset, actionSortRand10, actionSortRand10Reverse, actionTripleShow, actionTripleShowReset } from "../../Actions/017";
 import random10Obj from "../../Reducers/random10Obj";
 
 function Rand10Obj() {
@@ -26,6 +26,8 @@ function Rand10Obj() {
                 <button onClick={() => dispachRandom(actionSortRand10Reverse())}>sort rand numbers reverse</button>
                 <button onClick={() => dispachRandom(actionReset())}>sort reset</button>
                 <button onClick={() => dispachRandom(actionRandRand())}>randomize</button>
+                <button onClick={() => dispachRandom(actionTripleShow())}>Triple show change</button>
+                <button onClick={() => dispachRandom(actionTripleShowReset())}>Triple show change reset</button>
             </div>
         </>
     )

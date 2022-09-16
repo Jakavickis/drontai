@@ -67,9 +67,10 @@ export function actionRandRand() {
         type: RAND_RAND
     }
 }
-export function actionTripleShow() {
+export function actionTripleShow(pos) {
     return {
-        type: TRIPLE_SHOW_HIDE
+        type: TRIPLE_SHOW_HIDE,
+        payload: pos
     }
 }
 export function actionTripleShowReset() {

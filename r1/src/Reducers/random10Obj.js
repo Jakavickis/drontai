@@ -26,10 +26,10 @@ function random10Obj(state, action) {
             newState.sort(() => rand(0, 1) ? -1 : 1);
             break
         case TRIPLE_SHOW_HIDE:
-            newState.filter((a, i) => a.numbers === a.line ? a.numbers : null)
+            newState = newState.map(n => ({ ...n, show: (n.numbers % 2 ? action.payload : !action.payload) }));
             break
         case TRIPLE_SHOW_RESET:
-            newState.filter((a, i) => a.numbers === a.line ? a.numbers : null)
+            newState = newState.map(n => ({ ...n, show: true }));
             break
         default:
     }

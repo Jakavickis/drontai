@@ -28,6 +28,9 @@ function Books() {
                 {
                     books?.map((b, i) => <div className="book" key={b.id}>
                         <h2>{b.title}</h2>
+                        <h4>{b.author}</h4>
+                        <img src={b.img} alt="img"></img>
+                        <div className="price">Price: {b.price}$</div>
                     </div>)
                 }
             </div>

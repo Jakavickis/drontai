@@ -1,15 +1,16 @@
 import './App.scss';
-import Books from './Components/019/Books';
+import Api1 from './Components/018/Api1';
+import Api2 from './Components/018/Api2';
 
 function App() {
-
 
 
     return (
         <div className="App">
             <header className="App-header">
-                <h2>API CALL 2</h2>
-                <Books />
+                <h2>API CALL</h2>
+                <Api1 />
+                <Api2 />
             </header>
         </div >
     );

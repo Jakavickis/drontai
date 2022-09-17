@@ -13,13 +13,24 @@ function Books() {
             })
     }, [])
 
+    if (null === books) {
+        return (
+            <div className="loader-bin">
+                <div className="lds-ripple"><div></div><div></div></div>
+            </div>
+        );
+    }
+
+
     return (
         <>
-            <ul>
+            <div className="books">
                 {
-                    books?.map((b, i) => <li key={b.id}>{b.title}</li>)
+                    books?.map((b, i) => <div className="book" key={b.id}>
+                        <h2>{b.title}</h2>
+                    </div>)
                 }
-            </ul>
+            </div>
         </>
     )
 }

@@ -292,6 +292,7 @@ button {
   padding: 20px;
 
   .book {
+    position: relative;
     width: 300px;
     height: 400px;
     display: flex;
@@ -330,7 +331,46 @@ button {
       font-weight: bold;
     }
 
+    .types {
+      position: absolute;
+      left: -1px;
+      top: -40px;
+      font-size: 15px;
+      background-color: #6495ed50;
+      color: white;
+      padding: 10px;
+    }
+
+    .button {
+      width: 10px
+    }
+
   }
+
+  .cart {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+      transition: all 0.5s;
+      fill: blueviolet;
+
+      &:hover {
+        fill: darkmagenta;
+      }
+    }
+  }
+
+  button {
+    padding: 10px;
+    width: 125px;
+    background-color: cadetblue;
+    color: #61dafb;
+  }
+
 }
 
 .lds-ripple {

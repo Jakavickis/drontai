@@ -10,6 +10,13 @@ function App() {
     const [counter3, setCounter3] = useState(0);
     const [counter4, setCounter4] = useState([rand(10, 99), rand(10, 99)]);
     const [counter5, setCounter5] = useState(0);
+    const [color, setColor] = useState('skyblue');
+
+    const changeColor = () => {
+        setTimeout(() => {
+            setColor('crimson')
+        }, 1000);
+    }
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -55,6 +62,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <div className="container">
+                    <div style={{ backgroundColor: color }} onClick={changeColor}></div>
+                </div>
                 <h2>{counter}</h2>
                 <h2>{counter2}</h2>
                 <h2>{counter4[0]}-{counter4[1]} times: {counter5}</h2>

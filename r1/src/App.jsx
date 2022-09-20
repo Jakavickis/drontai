@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import rand from './Functions/rand';
 import './App.scss';
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     const [counter, setCounter] = useState(0);
     const [counter2, setCounter2] = useState(0);
     const [counter3, setCounter3] = useState(0);
+    const [counter4, setCounter4] = useState([rand(10, 99), rand(10, 99)]);
+
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -35,11 +38,25 @@ function App() {
         }
     }, []);
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const d = [rand(10, 99), rand(10, 99)];
+            setCounter4(d);
+            if (d[0] === d[1]) {
+                clearInterval(intervalId);
+            }
+        }, 100);
+        return () => {
+            clearInterval(intervalId);
+        }
+    }, []);
+
     return (
         <div className="App">
             <header className="App-header">
                 <h2>{counter}</h2>
                 <h2>{counter2}</h2>
+                <h2>{counter4[0]}-{counter4[1]}</h2>
                 <div className="container">
                     {
                         [...Array(counter3)].map((_, i) => <div key={i}></div>)

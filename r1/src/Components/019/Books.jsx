@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { useReducer } from 'react';
+import booksReducer from '../../Reducers/booksReducer';
+import { getFromServer, sortBooks } from '../../Actions/books';
 
 const selectOptions = [
     { id: 1, text: 'Default' },
@@ -11,14 +14,14 @@ const selectOptions = [
 
 function Books() {
 
-    const [books, setBooks] = useState(null);
+    const [books, dispachBooks] = useReducer(booksReducer, null);
     const [types, setTypes] = useState(null);
     const [cart, setCart] = useState([]);
     const [select, setSelect] = useState(selectOptions[0].id);
 
     useEffect(() => {
         axios.get('https://in3.dev/knygos/')
-            .then(res => setBooks(res.data.map((b, i) => ({ ...b, row: i }))));
+            .then(res => dispachBooks(getFromServer(res.data)));
 
     }, [])
 
@@ -26,6 +29,11 @@ function Books() {
         axios.get('https://in3.dev/knygos/types/')
             .then(res => setTypes(res.data));
     }, []);
+
+    useEffect(() => {
+        dispachBooks(sortBooks(select));
+    }, [select]);
+
 
     const buy = id => {
         const product = cart.find(b => b.id === id);

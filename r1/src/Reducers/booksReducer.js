@@ -1,5 +1,5 @@
 
-import { GET_FROM_SERVER, SORT_BOOKS } from "../Constants/books";
+import { GET_FROM_SERVER, SORT_BOOKS, FILTER_BOOKS } from "../Constants/books";
 
 function booksReducer(state, action) {
 
@@ -9,7 +9,7 @@ function booksReducer(state, action) {
     switch (action.type) {
 
         case GET_FROM_SERVER:
-            newState = action.payload.map((b, i) => ({ ...b, row: i }));
+            newState = action.payload.map((b, i) => ({ ...b, row: i, show: true }));
             break;
         case SORT_BOOKS:
             switch (action.payload) {
@@ -30,6 +30,9 @@ function booksReducer(state, action) {
                     break;
                 default:
             }
+            break;
+        case FILTER_BOOKS:
+            newState = newState.map(b => b.price < parseInt(action.payload) ? { ...b, show: true } : { ...b, show: false });
             break;
         default:
     }
